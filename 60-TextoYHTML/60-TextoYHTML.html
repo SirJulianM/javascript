@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --yellow-color: #F7DF1E;
+            --dark-color: #222;
+        }
+
+        .card {
+            display: inline-block;
+            background-color: var(--dark-color);
+            color: var(--yellow-color);
+        }
+
+        .card figcaption {
+            padding: 1rem;
+        }
+
+        .rotate-45 {
+            transform: rotate(45deg);
+        }
+
+        .rotate-135 {
+            transform: rotate(135deg);
+        }
+
+        .opacity-80 {
+            opacity: .8;
+        }
+
+        .sepia {
+            filter: sepia(1);
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Manejo del DOM</h3>
+    <p id="que-es">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum excepturi nesciunt minus et? Deserunt, optio?
+        Dicta, eum veritatis! Deserunt voluptate natus nesciunt. Eum repellat eaque odio! Iusto, molestiae! Laudantium,
+        fugiat.
+    </p>
+    <nav id="menu">
+        <ul>
+            <li><a href="">Sección1</a></li>
+            <li><a href="">Sección2</a></li>
+            <li><a href="">Sección3</a></li>
+            <li><a href="">Sección4</a></li>
+            <li><a href="">Sección5</a></li>
+        </ul>
+    </nav>
+    <input type="text" name="Nombre" placeholder="Nombre">
+    <a href="webApi.html" class="link-dom" data-id="1" style="background-color: #F7DF1E; color:#222"
+        data-description="Document Object Model">DOM</a>
+    <section class="cards">
+        <figure class="card">
+            <img src="http://lorempixel.com/400/400" alt="tech">
+            <figcaption>Hola</figcaption>
+        </figure>
+        <figure class="card">
+            <img src="http://lorempixel.com/400/400" alt="Monik">
+            <figcaption>Hola</figcaption>
+        </figure>
+        <figure class="card">
+            <img src="http://lorempixel.com/400/400" alt="Julian">
+            <figcaption>Hola</figcaption>
+        </figure>
+        <figure class="card">
+            <img src="http://lorempixel.com/400/400" alt="Andres">
+            <figcaption>Hola</figcaption>
+        </figure>
+        <figure class="card">
+            <img src="http://lorempixel.com/400/400" alt="Sofia">
+            <figcaption>Hola</figcaption>
+        </figure>
+    </section>
+    <script src="60-TextoYHTML.js"></script>
+</body>
+
+</html>
