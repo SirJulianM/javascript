@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
+    <style>
+        /*Variables CSS*/
+        :root{
+            --main-font: sans-serif;
+            --font-size: 16px;
+            --main-color: #f7df1e;
+            --second-color: #222;
+            --main-modal-color: rgba(247,222, 30, .85);
+            --second-modal-color: rgba(34, 34, 34, .85);
+            --container-width: 1200px;
+        }
+        html{
+            box-sizing: border-box;
+            font-family: var(--main-font);
+            font-size: var(--font-size);
+            scroll-behavior: smooth;
+        }
+        *, *::before, *::after{
+            box-sizing: inherit;
+        }
+        body{
+            margin: 0;
+            overflow-x: hidden;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+        .header{
+            position: sticky;
+            top: 0;
+            padding: 1rem;
+            background-color: var(--main-color);
+            color: var(--second-color);
+        }
+        .header h1{
+            text-align: center;
+            margin: 0 auto;
+        }
+        .section{
+            padding: 2rem;
+            padding-top: 4rem;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            max-width: var(--container-width);
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .panel{
+            position: fixed;
+            z-index: 998;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--second-modal-color);
+            opacity: 0;
+            transition: transform .3s ease, opacity .3s ease; 
+            /*De arriba*/
+            transform: translate(0, -100%);
+            /*De abajo */
+            /* transform: translate(0, 100%); */
+            /*De la derecha */
+            /* transform: translate(100%, 0); */
+            /*De la izquierda*/
+            /* transform: translate(-100%, 0); */
+        }
+
+        .panel.is-active{
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+
+        .panel-btn{
+            position: fixed;
+            z-index: 1000;
+            bottom: 1vh;
+            right: 1vw;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--main-color);
+        }
+
+        .menu{
+            width: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+        }
+        .menu a{
+            padding: 2rem;
+            width: inherit;
+            display: block;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: var(--main-color);
+            transition: all 0.3s ease;
+        }
+        .menu a:hover{
+            font-weight: bold;
+            color: var(--second-color);
+            background-color: var(--main-modal-color);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Ejercicios del DOM</h1>
+    </header>
+    <button class="panel-btn hamburger hamburger--vortex">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+    <aside class="panel">
+       <nav class="menu">
+        <a href="#seccion1">Sección 1</a>
+        <a href="#seccion2">Sección 2</a>
+        <a href="#seccion3">Sección 3</a>
+        <a href="#seccion4">Sección 4</a>
+        <a href="#seccion5">Sección 5</a>
+       </nav>
+    </aside>
+    <main>
+       <section id="seccion1" class="section">
+           <h2>Sección 1</h2>
+       </section>
+       <section id="seccion2" class="section">
+           <h2>Sección 2</h2>
+       </section>
+       <section id="seccion3" class="section">
+           <h2>Sección 3</h2>
+       </section>
+       <section id="seccion4" class="section">
+           <h2>Sección 4</h2>
+       </section>
+       <section id="seccion5" class="section">
+           <h2>Sección 5</h2>
+       </section>
+    </main>
+    <footer>
+        <h6 style="text-align: center;">Copyright - Todos los derechos reservados</h6>
+    </footer>
+    <script src="74-EjerciciosDOM1.js" type="module"></script>
+</body>
+
+</html>
