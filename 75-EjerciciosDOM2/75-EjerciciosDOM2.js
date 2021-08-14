@@ -1,6 +1,6 @@
 import hamburgerMenu from "./menuHamburguesa.js"
 import {digitalClock, alarm} from "./reloj.js"
-import { shortcuts } from "./teclado.js";
+import {moveBall, shortcuts} from "./teclado.js";
 
 const d = document;
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -11,4 +11,5 @@ d.addEventListener("DOMContentLoaded", (e) => {
 
 d.addEventListener("keydown", (e)=>{
     shortcuts(e);
+    moveBall(e, ".ball", ".stage");
 })
