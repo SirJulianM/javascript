@@ -14,33 +14,33 @@ export function moveBall(e, ball, stage)
     switch (e.keyCode) 
     {
         case 37:    
-            e.preventDefault();
             if(limitBall.left > limitStage.left)
             {
+                e.preventDefault();
                 x--;
             }            
             break;
 
-        case 38:    
-            e.preventDefault();
+        case 38:
             if(limitBall.top > limitStage.top)
-            {                
+            {
+                e.preventDefault();                
                 y--;
             }
             break;
 
         case 39:
-            e.preventDefault();
             if(limitBall.right < limitStage.right)
             {
+                e.preventDefault();
                 x++;
             }            
             break;
 
         case 40:
-            e.preventDefault();
             if(limitBall.bottom < limitStage.bottom)
             {
+                e.preventDefault();
                 y++;
             }
             break;
