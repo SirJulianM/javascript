@@ -5,6 +5,7 @@ import countdown from './cuentaRegresiva.js';
 import scrollTopButton from "./botonScroll.js";
 import darkTheme from "./temaOscuro.js";
 import responsiveMedia from "./objetoResponsive.js";
+import responsiveTester from "./pruebaResponsive.js";
 
 const d = document;
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -31,7 +32,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
         gyroscope; 
         picture-in-picture" 
         allowfullscreen></iframe>`
-        );
+    );
     responsiveMedia
     (
         "gmaps", 
@@ -44,7 +45,8 @@ d.addEventListener("DOMContentLoaded", (e) => {
         style="border:0;" 
         allowfullscreen="" 
         loading="lazy"></iframe>`
-        );
+    );
+    responsiveTester('responsive-tester');
 })
 
 d.addEventListener("keydown", (e)=>{
