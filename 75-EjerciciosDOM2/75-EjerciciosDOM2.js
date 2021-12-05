@@ -8,6 +8,7 @@ import responsiveMedia from "./objetoResponsive.js";
 import responsiveTester from "./pruebaResponsive.js";
 import userDeviceInfo from "./deteccionDispositivos.js";
 import networkStatus from "./deteccionRed.js";
+import webCam from "./deteccionWebcam.js";
 
 const d = document;
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -49,8 +50,8 @@ d.addEventListener("DOMContentLoaded", (e) => {
         loading="lazy"></iframe>`
     );
     responsiveTester('responsive-tester');
-    userDeviceInfo('user-device');
-    networkStatus();
+    userDeviceInfo('user-device');    
+    webCam('webcam');
 })
 
 d.addEventListener("keydown", (e)=>{
@@ -59,3 +60,4 @@ d.addEventListener("keydown", (e)=>{
 })
 
 darkTheme(".dark-theme-btn", "dark-mode");
+networkStatus();
