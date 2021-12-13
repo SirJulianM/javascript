@@ -67,6 +67,7 @@
             background-color: var(--second-modal-color);
             opacity: 0;
             visibility: hidden;
+            overflow-y: auto;
             transition: transform .3s ease, opacity .3s ease; 
             /*De arriba*/
             transform: translate(0, -100%);
@@ -248,7 +249,7 @@
         <a href="#seccion6">Detección de dispositivos (User Agent)</a>
         <a href="#seccion7">Detección de la conexión</a>
         <a href="#seccion8">Detección de la cámara web</a>
-        <a href="#seccion9">Sección9</a>
+        <a href="#seccion9">Geolocalización</a>
         <a href="#seccion10">Sección10</a>
         <a href="#seccion11">Sección11</a>
         <a href="#seccion12">Sección12</a>
@@ -319,7 +320,8 @@
            <video id="webcam"></video>
        </section>
        <section id="seccion9" class="section">
-           <h2>Sección 9</h2>
+           <h2>Geolocalización</h2>
+           <div id="geolocation"></div>
        </section>
        <section id="seccion10" class="section">
            <h2>Sección 10</h2>
