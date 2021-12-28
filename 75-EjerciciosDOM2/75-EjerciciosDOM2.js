@@ -12,6 +12,7 @@ import webCam from "./deteccionWebcam.js";
 import getGeolocalization from "./geolocalizacion.js";
 import searchFilters from "./filtroBusqueda.js";
 import draw from "./sorteo.js";
+import slider from "./carrusel.js";
 
 const d = document;
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -58,6 +59,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
     getGeolocalization('geolocation');
     searchFilters('.card-filter', '.card');
     draw("#winner-btn",".player");
+    slider();
 })
 
 d.addEventListener("keydown", (e)=>{
