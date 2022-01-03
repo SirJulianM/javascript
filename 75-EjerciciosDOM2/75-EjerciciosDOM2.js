@@ -13,6 +13,7 @@ import getGeolocalization from "./geolocalizacion.js";
 import searchFilters from "./filtroBusqueda.js";
 import draw from "./sorteo.js";
 import slider from "./carrusel.js";
+import scrollSpy from "./scrollEspia.js";
 
 const d = document;
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -60,6 +61,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
     searchFilters('.card-filter', '.card');
     draw("#winner-btn",".player");
     slider();
+    scrollSpy();
 })
 
 d.addEventListener("keydown", (e)=>{
