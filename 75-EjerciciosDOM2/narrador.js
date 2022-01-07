@@ -12,12 +12,12 @@ export default function SpeechReader()
     let voices = [];
 
     d.addEventListener("DOMContentLoaded", (e) => {
-        /* console.log(w.speechSynthesis.getVoices());
-        console.log(w.speechSynthesis); */
+        //console.log(w.speechSynthesis.getVoices());
+        //console.log(w.speechSynthesis); 
         w.speechSynthesis.addEventListener("voiceschanged", (e) => {
-            /* console.log(e); */
+            //console.log(e);
             voices = w.speechSynthesis.getVoices();
-            /* console.log(voices); */
+            //console.log(voices); 
             voices.forEach((voice) => {
                 const $option = d.createElement("option");
                 $option.value = voice.name;

@@ -67,7 +67,6 @@ d.addEventListener("DOMContentLoaded", (e) => {
     scrollSpy();
     smartVideo();
     contactFormValidations();
-    SpeechReader();
 })
 
 d.addEventListener("keydown", (e)=>{
@@ -77,3 +76,4 @@ d.addEventListener("keydown", (e)=>{
 
 darkTheme(".dark-theme-btn", "dark-mode");
 networkStatus();
+SpeechReader();
