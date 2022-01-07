@@ -395,6 +395,85 @@
             } */
         }
 
+        /* Contact Form Validations */
+
+        .contact-form{
+            --form-ok-color: #4caf50;
+            --form-error-color: #f44336;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+
+        .contact-form > * {
+            padding: 0.5rem;
+            margin: 1rem auto;
+            display: block;
+            width: 100%;
+        }
+
+        .contact-form textarea{
+            resize: none;
+        }
+
+        .contact-form legend, .contact-form-response{
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .contact-form input, .contact-form textarea{
+            font-size: 1rem;
+            font-family: sans-serif;
+        }
+
+        .contact-form input[type="submit"]{
+            width: 50%;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .contact-form *::placeholder{
+            color: #000;
+        }
+
+        .contact-form [required]:valid{
+            border: thin solid var(--form-ok-color);
+        }
+
+        .contact-form [required]:invalid{
+            border: thin solid var(--form-error-color);
+        }
+
+        .contact-form-error{
+            margin-top: -1rem;
+            font-size: 80%;
+            background-color: var(--form-error-color);
+            color: #FFF;
+            transition: all 800ms ease;
+        }
+
+        .contact-form-error.is-active{
+            display: block;
+            animation: show-message 1s 1 normal 0s ease-out both;
+        }
+
+        .none{
+            display: none;
+        }
+
+        @keyframes show-message {
+            0%{
+                visibility: hidden;
+                opacity: 0;
+            }
+            
+            100% {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
     </style>
 </head>
 <body data-dark>
@@ -421,7 +500,7 @@
         <a href="#seccion11" data-scroll-spy>Sorteo digital</a>
         <a href="#seccion12" data-scroll-spy>Responsive slider</a>
         <a href="#seccion13" data-scroll-spy>Video inteligente</a>
-        <a href="#seccion14" data-scroll-spy>Sección 14</a>
+        <a href="#seccion14" data-scroll-spy>Validaciones de formularios</a>
         <a href="#seccion15" data-scroll-spy>Sección 15</a>
        </nav>
     </aside>
@@ -586,7 +665,25 @@
            <video src="sound/Video.mp4" muted controls loop data-smart-video></video>
        </section>
        <section id="seccion14" class="section" data-scroll-spy>
-           <h2>Sección 14</h2>
+           <h2>Validaciones de formularios</h2>
+            <form target="_blank" action="https://formsubmit.co/ing_julianmadrid@hotmail.com" method="POST"
+                class="contact-form">
+                <legend>Envíanos tus comentarios</legend>
+                <input type="text" name="name" id="" placeholder="Escribe tu nombre"
+                    title="Nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                <input type="email" name="email" id="" placeholder="Escribe tu email" title="El Email es incorrecto"
+                    pattern="^[a-z0-9._%+-]+(\.[_a-z0-9._%+-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                <input type="text" name="asunto" id="" placeholder="Asunto a tratar" title="El asunto es requerido" required>
+                <textarea name="comments" id="" cols="50" rows="5" placeholder="Escribe tus comentarios"
+                    title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
+                <button type="submit" value="Enviar">Enviar</button>
+                <div class="contact-form-loader none">
+                    <img src="sound/oval.svg" alt="Cargando">
+                </div>
+                <div class="contact-form-response none">
+                    <p>Los datos han sido enviados</p>
+                </div>
+            </form>
        </section>
        <section id="seccion15" class="section" data-scroll-spy>
            <h2>Sección 15</h2>
