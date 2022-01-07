@@ -16,6 +16,7 @@ import slider from "./carrusel.js";
 import scrollSpy from "./scrollEspia.js";
 import smartVideo from "./videoInteligente.js";
 import contactFormValidations from "./validacionesFormulario.js";
+import SpeechReader from "./narrador.js";
 
 const d = document;
 d.addEventListener("DOMContentLoaded", (e) => {
@@ -66,6 +67,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
     scrollSpy();
     smartVideo();
     contactFormValidations();
+    SpeechReader();
 })
 
 d.addEventListener("keydown", (e)=>{
