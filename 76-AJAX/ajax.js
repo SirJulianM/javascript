@@ -12,9 +12,9 @@
         //console.log(xhr);
         if(xhr.status >=200 && xhr.status < 300)
         {
-            console.log("Éxito");
+            //console.log("Éxito");
             let json = JSON.parse(xhr.responseText);
-            console.log(json);
+            //console.log(json);
             json.forEach(el =>
             {
                 const $li = document.createElement("li");
@@ -25,11 +25,11 @@
         }
         else
         {
-            console.log("Error");
+            //console.log("Error");
             let message = xhr.statusText || "Ocurrió un error";
             $xhr.innerHTML = `Error ${xhr.status}: ${message}`;
         }
-        console.log("Este mensaje cargará de cualquier forma")
+        //console.log("Este mensaje cargará de cualquier forma")
     });
     
     /* 3) Instrucción que abre la petición (Establecer en el método en que lo vamos a hacer) */
@@ -49,7 +49,7 @@
     .then(
         json =>
         {
-            console.log(json);
+            //console.log(json);
             //$fetch.innerHTML = json;
             json.forEach(el =>
             {
@@ -62,15 +62,67 @@
     )
     .catch(err =>
         {
-            console.log(err);     
+            //console.log(err);     
             let message = err.statusText || "Ocurrió un error";
             $fetch.innerHTML = `Error ${err.status}: ${message}`;       
         }
     )
     .finally(() =>
         {
-            console.log("Esto se ejecutará independientemente del resultado de la promesa fetch");
+            //console.log("Esto se ejecutará independientemente del resultado de la promesa fetch");
         }
     );
 
+})();
+
+(()=>
+{
+    const $fetchAsync = document.getElementById("fetch-async"),
+    $fragment = document.createDocumentFragment();
+
+    async function getData() 
+    {
+        try {
+            let res = await fetch("https://jsonplaceholder.typicode.com/users"),
+                json = await res.json();
+
+            console.log(res);
+            console.log(json);
+
+            /*if(!res.ok)
+            {
+                throw new Error("Ocurrió un error al solicitar los datos");
+            }*/
+
+            if(!res.ok)
+            {
+                throw{
+                    status: res.status,
+                    statusText: res.statusText
+                };
+            }
+            json.forEach(el => 
+            {
+                const $li = document.createElement("li");
+                $li.innerHTML = `Nombre: ${el.name} -- Email: ${el.email} -- Teléfono: ${el.phone}`;
+                $fragment.appendChild($li);
+            });
+            $fetchAsync.appendChild($fragment);
+        } 
+        catch (err) 
+        {
+            //console.log("Estoy en el catch", err);
+            let message = err.statusText || "Ocurrió un error";
+            $fetchAsync.innerHTML = `Error ${err.status}: ${message}`;  
+        }
+        finally
+        {
+            console.log("Esto se ejecuta independiente del Try-Catch");
+        }
+        
+    }
+
+    getData();
+
+    
 })();

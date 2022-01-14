@@ -10,34 +10,107 @@
 
 <body>
     <h1>AJAX: Asynchronus Javascript & XML</h1>
-    <img src="ajax.png" alt="">
-    <!--
-        AJAX significa Asynchronous JavaScript And XML. En pocas palabras, es el uso del objeto 
-        XMLHttpRequest para comunicarse con los servidores.
-
-        Puede enviar y recibir información en varios formatos, incluidos JSON, XML, HTML y archivos de texto.
-        
-        El atractivo de AJAX es su naturaleza "asíncrona", lo que significa que puede comunicarse 
+    <p>
+        <b><i>AJAX</i></b> significa <b><i>Asynchronous JavaScript And XML</i></b> . En pocas palabras, 
+        es el uso del objeto 
+        XMLHttpRequest para comunicarse con los servidores.</p>
+    <p>
+        Puede enviar y recibir información en varios formatos, incluidos 
+        <b><i>JSON</i></b>, <b><i>XML</i></b>, <b><i>HTML</i></b> y archivos de texto.
+    </p>
+    <p>
+        El atractivo de <b><i>AJAX</i></b> es su naturaleza "asíncrona", lo que significa que puede comunicarse 
         con el servidor, intercambiar datos y actualizar la página sin tener que recargar el navegador.
-    -->
-    <!--
+    </p>
+    <img src="ajax.png" alt="">
+    <h2>Métodos nativos</h2>
+    <ul>
+        <li>
+            <h3>
+                <a href="https://developer.mozilla.org/en-US/docs/Archive/Web/JavaScript/Microsoft_Extensions/ActiveXObject"
+                target="_blank" rel="noopener">ActiveXObject <small>(IE8 e inferiores)</small></a>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="https://developer.mozilla.org/es/docs/Web/API/XMLHttpRequest"
+                target="_blank" rel="noopener">XMLHttpRequest</a>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="https://developer.mozilla.org/es/docs/Web/API/Fetch_API"
+                target="_blank" rel="noopener">API Fetch</a>
+            </h3>
+        </li>
+    </ul>
+    <h2>Librerías externas</h2>
+    <ul>
+        <li>
+            <h3>
+                <a href="https://api.jquery.com/category/ajax/" target="_blank" rel="noopener">JQuery.ajax()</a>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="https://github.com/axios/axios" target="_blank" rel="noopener">Axios</a>
+            </h3>
+        </li>
+        <li>
+            <h3>ETC</h3>
+        </li>
+    </ul>
+    <p>
         AJAX no es una tecnología en sí mismo. En realidad, se trata de varias tecnologías 
         independientes que se unen:
-
-        - HTML y CSS, para crear una presentación basada en estándares.
-        - DOM, para la interacción y manipulación dinámica de la presentación.
-        - HTML, XML y JSON, para el intercambio y la manipulación de información.
-        - XMLHttpRequest o Fetch, para el intercambio asíncrono de información.
-        - JavaScript, para unir todas las demás tecnologías.
-
+    </p>
+    <ul>
+        <li>
+            <b>HTML y CSS</b>, para crear una presentación basada en estándares.
+        </li>
+        <li>
+            <b>DOM</b>, para la interacción y manipulación dinámica de la presentación.
+        </li>
+        <li>
+            <b>HTML, XML y JSON</b>, para el intercambio y la manipulación de información.
+        </li>
+        <li>
+            <b>XMLHttpRequest</b> o <b>Fetch</b>, para el intercambio asíncrono de información.
+        </li>
+        <li>
+            <b>JavaScript</b>, para unir todas las demás tecnologías.
+        </li>
+        <li>
+            <b>Estado de la petición</b>
+            <br>
+            <ul>
+                <li>
+                    READY_STATE_UNINITIALIZED
+                </li>
+                <li>
+                    READY_STATE_LOADING
+                </li>
+                <li>
+                    READY_STATE_LOADED
+                </li>
+                <li>
+                    READY_STATE_INTERACTIVE
+                </li>
+                <li>
+                    READY_STATE_COMPLETE
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <!--
         Es importante también considerar los Códigos de estado de respuesta HTTP y los estados de la 
         petición AJAX:
 
-        - READY_STATE_UNINITIALIZED
-        - READY_STATE_LOADING
-        - READY_STATE_LOADED
-        - READY_STATE_INTERACTIVE
-        - READY_STATE_COMPLETE
+        - Respuestas informativas (100–199),
+        - Respuestas satisfactorias (200–299),
+        - Redirecciones (300–399),
+        - Errores de los clientes (400–499),
+        - y errores de los servidores (500–599).
     -->
 </body>
     <h2>Objeto XMLHttpRequest</h2>
@@ -45,6 +118,9 @@
     </ol>
     <h2>Api Fetch</h2>
     <ol id="fetch">
+    </ol>
+    <h2>Api Fetch Async</h2>
+    <ol id="fetch-async">
     </ol>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <script src="ajax.js"></script>
