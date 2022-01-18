@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!---->
+    <h2>¿Que es una API?</h2>
+    <p>
+        Una <b>API</b> (<b>Application Programming Interface</b>), o Interfaz de Programación de Aplicaciones, es un conjunto de
+        rutinas que provee acceso a funciones de un determinado software, para efectos de esta nota, acceso a las
+        funciones de nuestros sitios y aplicaciones web.
+    </p>
+    <p>
+        Dentro de los navegadores tenemos dos tipos de API's:
+    </p>
+    <ol>
+        <li>
+            <b>APIs Nativas</b>: como el DOM que es el API que nos permite acceder al código HTML 
+            de nuestros documentos a través de JavaScript o la de Geolocalización que no permite 
+            acceder a las coordendas terrestres de nuestra ubicación actual
+        </li>
+        <li>
+            <b>APIs Externas</b>: como la de Twitter que nos permite obtener los últimos tweets de un usuario, 
+            o la de GitHub que nos permite obtener la información de los repositorios de una cuenta o como 
+            la API de WordPress que nos permite acceder a la información de páginas y entradas de un sitio.
+        </li>
+    </ol>
+    <p>
+        La mayoría de APIs externas del desarrollo web actual, funcionan con la Arquitectura <b>REST</b>.
+    </p>
+    <h2>¿Que es REST?</h2>
+    <p>
+        El término <b>REST (Representational State Transfer)</b> o Transferencia de Estado Representacional, 
+        se originó en el año 2000, descrito en la tesis de Roy Fielding, padre de la 
+        especificación HTTP.
+    </p>
+    <p>
+        Un servicio <b>REST</b> es un conjunto de restricciones con las que podemos crear un estilo 
+        de arquitectura de software, la cual podremos usar para crear aplicaciones web respetando 
+        el protocolo HTTP.
+    </p>
+    <p>
+        Hoy en día la mayoría de las empresas utilizan <b>API REST</b> para crear servicios. 
+        Esto se debe a que es un estándar lógico y eficiente para la creación de servicios web.
+    </p>
+    <p>
+        Según Fielding las restricciones que definen a un sistema <b>API REST</b> o <b>RESTful</b> 
+        como también se le conoce, son:
+    </p>
+    <ul>
+        <li>
+            <b>Cliente - Servidor</b>: esta restricción mantiene al cliente y al servidor débilmente 
+            acoplados. Esto quiere decir que el cliente no necesita conocer los detalles de 
+            implementación del servidor y el servidor se olvida de entender cómo son usados 
+            los datos que envía al cliente.
+        </li>
+        <li>
+            <b>Sin Estado</b>: significa que cada petición recibida por el servidor debería ser 
+            independiente, es decir, no es necesario mantener sesiones.
+        </li>
+        <li>
+            <b>Cacheable</b>: debe admitir un sistema de almacenamiento en caché, lo que evitará repetir 
+            varias conexiones entre el servidor y el cliente para recuperar un mismo recurso.
+        </li>
+        <li>
+            <b>Interfaz Uniforme</b>: significa una interfaz genérica para administrar cada interacción 
+            que se produzca entre el cliente y el servidor de manera uniforme, lo cual simplifica y separa 
+            la arquitectura. Esta restricción indica que cada recurso del servicio <b>REST</b> debe tener una 
+            única dirección (URL) web, a estas rutas se les da el nombre de <b>endpoints</b>.
+        </li>
+        <li>
+            <b>Sistema de capas</b>: el servidor puede disponer de varias capas para su implementación. 
+            Esto ayuda a mejorar la escalabilidad, el rendimiento y la seguridad.
+        </li>
+    </ul>
+    <p>
+        Si creas aplicaciones web con JavaScript, las API REST probablemente serán la forma principal 
+        de obtener datos para tus aplicaciones, así como la de enviar datos hacia una base de datos.
+    </p>
+    <p>
+        Así que... ...sí las API REST, son el nuevo CRUD del desarrollo moderno, con la ventaja de 
+        que puedes desacoplar tu la lógica de tu cliente de la del servidor y la base de datos.
+    </p>
+    <p>
+        CRUD: Create, Read, Update, Delete
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Operaciones CRUD</th>
+                <th>Peticiones REST</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>INSERT</td>
+                <td>POST</td>
+            </tr>
+            <tr>
+                <td>SELECT</td>
+                <td>GET</td>
+            </tr>
+            <tr>
+                <td>UPDATE</td>
+                <td>PUT</td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td>DELETE</td>
+            </tr>
+        </tbody>
+    </table>
+    <img src="img/rest-crud.png" alt="">
+    <p>
+        Otra ventaja de este modelo de desarrollo es que puedes usar un mismo origen de datos para 
+        distintos clientes, por ejemplo un cliente nativo (iOS, Android), un cliente de escritorio 
+        (Windows) o un cliente web (Navegadores).
+    </p>
+    <img src="img/rest-arquitectura.jpg" alt="">
+</body>
+
+</html>
