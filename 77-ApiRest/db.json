@@ -1,54 +1,66 @@
 {
-    "santos":
-    [
-        {
-            "id":1,
-            "nombre":"Seiya",
-            "constelacion":"Pegaso"
-        },
-        {
-            "id":2,
-            "nombre":"Shiryu",
-            "constelacion":"Dragón"
-        },
-        {
-            "id":3,
-            "nombre":"Hyoga",
-            "constelacion":"Cisne"
-        },
-        {
-            "id":4,
-            "nombre":"Shun",
-            "constelacion":"Andrómeda"
-        },
-        {
-            "id":5,
-            "nombre":"Ikki",
-            "constelacion":"Fénix"
-        }
-    ],
-    "dioses": 
-    [
-        {
-            "id":1,
-            "nombre":"Athena",
-            "de":"Tierra"
-        },
-        {
-            "id":2,
-            "nombre":"Poseidón",
-            "constelacion":"Mar"
-        },
-        {
-            "id":3,
-            "nombre":"Hades",
-            "constelacion":"Infierno"
-        },
-        {
-            "id":4,
-            "nombre":"Zeus",
-            "constelacion":"Cielo"
-        }
-
-    ]
+  "santos": [
+    {
+      "id": 1,
+      "nombre": "Seiya",
+      "constelacion": "Pegaso"
+    },
+    {
+      "id": 2,
+      "nombre": "Shiryu",
+      "constelacion": "Dragón"
+    },
+    {
+      "id": 3,
+      "nombre": "Hyoga",
+      "constelacion": "Cisne"
+    },
+    {
+      "id": 4,
+      "nombre": "Shun",
+      "constelacion": "Andrómeda"
+    },
+    {
+      "id": 5,
+      "nombre": "Ikki",
+      "constelacion": "Fénix"
+    },
+    {
+      "id": 6,
+      "nombre": "Saga",
+      "constelacion": "Gemini"
+    },
+    {
+      "id": 7,
+      "nombre": "Kanon",
+      "constelacion": "Gemini"
+    },
+    {
+      "id": 8,
+      "nombre": "Mu",
+      "constelacion": "Aries"
+    }
+  ],
+  "dioses": [
+    {
+      "id": 1,
+      "nombre": "Athena",
+      "de": "Tierra"
+    },
+    {
+      "id": 2,
+      "nombre": "Poseidón",
+      "constelacion": "Mar"
+    },
+    {
+      "id": 3,
+      "nombre": "Hades",
+      "constelacion": "Infierno"
+    },
+    {
+      "id": 4,
+      "nombre": "Zeus",
+      "constelacion": "Cielo"
+    }
+  ]
 }
