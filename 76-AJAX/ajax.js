@@ -1,3 +1,5 @@
+/* AJAX: Objeto XMLHttpRequest */
+
 (() =>
 {
     /* 1) Crea la instancia */
@@ -39,6 +41,9 @@
     xhr.send();
 })();
 
+
+/* AJAX: API Fetch */
+
 (() =>
 {
     const $fetch = document.getElementById("fetch"),
@@ -74,6 +79,8 @@
     );
 
 })();
+
+/* AJAX: API Fetch + Async - Await */
 
 (()=>
 {
@@ -128,6 +135,8 @@
     
 })();
 
+/* AJAX: Librería Axios */
+
 (()=>
 {
     const $axios = document.getElementById("axios"),
@@ -157,6 +166,8 @@
             //console.log("Esto se ejecutará independientemente del resultado de Axios");
         });
 })();
+
+/* AJAX: Librería Axios + Async - Await */
 
 (()=>
 {
