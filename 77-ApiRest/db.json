@@ -31,14 +31,19 @@
       "constelacion": "Gemini"
     },
     {
-      "id": 7,
-      "nombre": "Kanon",
-      "constelacion": "Gemini"
-    },
-    {
       "id": 8,
       "nombre": "Mu",
       "constelacion": "Aries"
+    },
+    {
+      "nombre": "Aldebarán",
+      "constelacion": "Tauro",
+      "id": 9
+    },
+    {
+      "nombre": "Shaka",
+      "constelacion": "Virgo",
+      "id": 10
     }
   ],
   "dioses": [
