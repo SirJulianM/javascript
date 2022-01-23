@@ -11,13 +11,13 @@
     <section class="crud">
         <article>
             <h2 class="crud-title">Agregar Santo</h2>
-            <form action="" class="crud-form">
+            <form class="crud-form">
                 <input type="text" name="nombre" id="" placeholder="nombre" required>
                 <br>
                 <input type="text" name="constelacion" id="" placeholder="constelación" required>
                 <br>
                 <input type="submit" value="Enviar">
-                <input type="hidden" name="action">
+                <input type="hidden" name="id">
                 <br>
             </form>
         </article>
@@ -32,14 +32,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                   <!--  <tr>
-                        <td class="name">Hola</td>
-                        <td class="constellation">Hola</td>
-                        <td>
-                            <button>Editar</button>
-                            <button>Eliminar</button>
-                        </td>
-                    </tr> -->
                 </tbody>
             </table>
         </article>
@@ -49,8 +41,8 @@
             <td class="name">Hola</td>
             <td class="constellation">Hola</td>
             <td>
-                <button>Editar</button>
-                <button>Eliminar</button>
+                <button class="edit">Editar</button>
+                <button class="delete">Eliminar</button>
             </td>
         </tr>
     </template>
