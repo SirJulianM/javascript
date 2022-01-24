@@ -26,11 +26,6 @@
       "constelacion": "Fénix"
     },
     {
-      "id": 6,
-      "nombre": "Saga",
-      "constelacion": "Gemini"
-    },
-    {
       "id": 8,
       "nombre": "Mu",
       "constelacion": "Aries"
@@ -41,9 +36,39 @@
       "id": 9
     },
     {
+      "nombre": "Saga",
+      "constelacion": "Gemini",
+      "id": 10
+    },
+    {
+      "nombre": "Kanon",
+      "constelacion": "Gemini",
+      "id": 11
+    },
+    {
+      "nombre": "Máscara de muerte",
+      "constelacion": "Cáncer",
+      "id": 12
+    },
+    {
+      "nombre": "Aioria",
+      "constelacion": "Leo",
+      "id": 13
+    },
+    {
       "nombre": "Shaka",
       "constelacion": "Virgo",
-      "id": 10
+      "id": 14
+    },
+    {
+      "nombre": "Dohko",
+      "constelacion": "Libra",
+      "id": 15
+    },
+    {
+      "nombre": "Milo",
+      "constelacion": "Escorpión",
+      "id": 16
     }
   ],
   "dioses": [
