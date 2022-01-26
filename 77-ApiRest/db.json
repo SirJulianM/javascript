@@ -69,6 +69,21 @@
       "nombre": "Milo",
       "constelacion": "Escorpión",
       "id": 16
+    },
+    {
+      "nombre": "Aioros",
+      "constelacion": "Sagitario",
+      "id": 17
+    },
+    {
+      "nombre": "Shura",
+      "constelacion": "Capricornio",
+      "id": 18
+    },
+    {
+      "nombre": "Kamus",
+      "constelacion": "Acuario",
+      "id": 19
     }
   ],
   "dioses": [
