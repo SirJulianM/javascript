@@ -397,14 +397,13 @@
 
         /* Contact Form Validations */
 
-        .contact-form{
+        .contact-form {
             --form-ok-color: #4caf50;
-            --form-error-color: #f44336;
+            --form-error-color: #f44366;
             margin-left: auto;
             margin-right: auto;
             width: 80%;
         }
-
         .contact-form > * {
             padding: 0.5rem;
             margin: 1rem auto;
@@ -412,7 +411,7 @@
             width: 100%;
         }
 
-        .contact-form textarea{
+        .contact-form textarea {
             resize: none;
         }
 
@@ -458,16 +457,23 @@
             animation: show-message 1s 1 normal 0s ease-out both;
         }
 
+        .contact-form-loader{
+            text-align: center;
+        }
+
         .none{
             display: none;
         }
 
+        h2 {
+            text-align: center;
+        }
+
         @keyframes show-message {
-            0%{
+            0% {
                 visibility: hidden;
                 opacity: 0;
             }
-            
             100% {
                 visibility: visible;
                 opacity: 1;
@@ -665,20 +671,23 @@
            <video src="sound/Video.mp4" muted controls loop data-smart-video></video>
        </section>
        <section id="seccion14" class="section" data-scroll-spy>
-           <h2>Validaciones de formularios</h2>
-            <form target="_blank" action="https://formsubmit.co/ing_julianmadrid@hotmail.com" method="POST"
-                class="contact-form">
+            <h2>Validaciones de formularios</h2>
+            <form action="https://formsubmit.co/ing_julianestebanmadrid1@hotmail.com" class="contact-form" method="POST"
+                target="_blank">
                 <legend>Envíanos tus comentarios</legend>
                 <input type="text" name="name" id="" placeholder="Escribe tu nombre"
                     title="Nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
-                <input type="email" name="email" id="" placeholder="Escribe tu email" title="El Email es incorrecto"
-                    pattern="^[a-z0-9._%+-]+(\.[_a-z0-9._%+-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
-                <input type="text" name="asunto" id="" placeholder="Asunto a tratar" title="El asunto es requerido" required>
+                <input type="email" name="email" id="" placeholder="Escribe tu correo" title="Email incorrecto"
+                    pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                <input type="text" name="_subject" id="" placeholder="Escribe el asunto" title="El asunto es requerido" required>
                 <textarea name="comments" id="" cols="50" rows="5" placeholder="Escribe tus comentarios"
                     title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
-                <button type="submit" value="Enviar">Enviar</button>
+                <input type="hidden" name="_next" value="https://jonmircha.com/">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="box">
+                <input type="submit" value="Enviar">
                 <div class="contact-form-loader none">
-                    <img src="sound/oval.svg" alt="Cargando">
+                    <img src="sound/circles.svg" alt="Cargando">
                 </div>
                 <div class="contact-form-response none">
                     <p>Los datos han sido enviados</p>
