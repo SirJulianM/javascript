@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Envío de ejercicios con fetch y form-submit</title>
+    <title>Envío de ejercicios con fetch y PHP</title>
     <style>
         html{
             box-sizing: border-box;
@@ -109,7 +109,7 @@
             title="Nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
         <input type="email" name="email" id="" placeholder="Escribe tu correo" title="Email incorrecto"
             pattern="^[a-z0-9._%+-]+(\.[_a-z0-9.-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
-        <input type="text" name="_subject" id="" placeholder="Escribe el asunto" title="El asunto es requerido" required>
+        <input type="text" name="subject" id="" placeholder="Escribe el asunto" title="El asunto es requerido" required>
         <textarea name="comments" id="" cols="50" rows="5" placeholder="Escribe tus comentarios"
             title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
         <input type="hidden" name="_next" value="https://jonmircha.com/">
@@ -159,7 +159,7 @@
                 }
             });
 
-            d.addEventListener("submit", e => {
+            d.addEventListener("submit", (e) => {
                 e.preventDefault();
                 alert("Enviando formulario");
 
@@ -167,6 +167,8 @@
                     $response = d.querySelector(".contact-form-response");
 
                 $loader.classList.remove("none");
+                console.log($loader);
+                console.log($response);
 
                 fetch("https://formsubmit.co/ajax/ing_julianestebanmadrid1@hotmail.com", {
                     method: "POST",
@@ -184,14 +186,18 @@
                     console.log(json);
                     $loader.classList.add("none");
                     $response.classList.remove("none");
+                    $response.innerHTML = `<p>${json.message}</p>`
                     $form.reset();
                 })
                 .catch(err => {
                     console.log(err);
                     let message = err.statusText || "Ocurrió un error, intenta enviar nuevamente";
-                    error(`Error ${err.status}: ${message}`);
+                    $response.innerHTML =`<p> ${err.status}: ${message} </p>`;
                 })
-                .finaly(() => setTimeout(() => $response.classList.add("none"), 3000));
+                .finaly(() => setTimeout(() => { 
+                    $response.classList.add("none"),
+                    $response.innerHTML = ""
+                    }, 3000));
             });
         }
     </script>
